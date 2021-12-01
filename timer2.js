@@ -21,12 +21,9 @@ rl.on('line', function(line) {
     console.log("Press b for instant beep or enter from 1 to 9 for setting timer for x seconds. To end ctrl + c");
   }
   rl.prompt();
-}).on('close', function() {
-  console.log('Have a great day!');
-  process.exit(0);
 });
 
-rl.on("close", function() {
+rl.on('close', function() {
   console.log("\nThanks for using me, ciao!");
   process.exit(0);
 });
