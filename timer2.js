@@ -11,7 +11,7 @@ rl.on('line', function(line) {
   line = line.trim();
   if (line === 'b') {
     process.stdout.write('\x07');
-  } else if (!isNaN(parseFloat(line)) && !isNaN(line - 0) && line >= 0) {
+  } else if (!isNaN(parseFloat(line)) && !isNaN(line - 0) && line >= 1 && line <= 9) {
     console.log(`setting timer for ${line} second...`);
     setTimeout(() => {
       console.log(`Alarm at ${line} second`);
